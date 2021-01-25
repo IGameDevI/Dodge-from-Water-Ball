@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 3
   maxSpeed: 6
+  particle: {fileID: 683171338855509302, guid: 9178e15648f709c4f83b822a990a6764, type: 3}
   damage: 1
 --- !u!61 &8583251013272971916
 BoxCollider2D:

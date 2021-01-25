@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
 
     private float speed;
     private Player playerScript;
+    public GameObject particle;
 
     public int damage;
     // Start is called before the first frame update
@@ -29,11 +30,13 @@ public class Enemy : MonoBehaviour
         if (hitObject.tag == "Player")
         {
             playerScript.TakeDamage(damage);
+            Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         if (hitObject.tag == "Finish")
         {
             Destroy(gameObject);
+            Instantiate(particle, transform.position, Quaternion.identity);
         }
     }
 }
