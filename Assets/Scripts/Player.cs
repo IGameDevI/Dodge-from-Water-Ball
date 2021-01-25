@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private float runHorizontal;
     private GameObject player;
 
-    public byte health;
+    public int health;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(runHorizontal * speed, rb.velocity.y);
     }
 
-    public void TakeDamage(byte damageAmount)
+    public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
         if (health <= 0)

@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     private float speed;
     private Player playerScript;
 
-    public byte damage;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
