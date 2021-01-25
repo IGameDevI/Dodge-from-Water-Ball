@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - health1
+  - health2
+  - health3
   layers:
   - Default
   - TransparentFX

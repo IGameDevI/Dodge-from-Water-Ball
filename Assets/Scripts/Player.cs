@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     Animator anim;
     private float runHorizontal;
     private GameObject player;
-
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
     public int health;
     // Start is called before the first frame update
     void Start()
@@ -47,7 +49,47 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
+        switch (damageAmount)
+        {
+            case 1:
+            {
+                switch (health)
+                {
+                    case 3:
+                        Destroy(heart3);
+                        break;
+                    case 2:
+                        Destroy(heart2);
+                        break;
+                    case 1:
+                        Destroy(heart1);
+                        break;
+                }
+                health -= damageAmount;
+                break;
+            }
+            case 2:
+            {
+                switch (health)
+                {
+                    case 3:
+                        Destroy(heart3);
+                        Destroy(heart2);
+                        break;
+                    case 2:
+                        Destroy(heart2);
+                        Destroy(heart1);
+                        break;
+                    case 1:
+                        Destroy(heart1);
+                        break;
+                }
+                health -= damageAmount;
+                break;
+            }
+        }
+
+
         if (health <= 0)
         {
             Destroy(player);
