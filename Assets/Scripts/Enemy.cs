@@ -29,6 +29,11 @@ public class Enemy : MonoBehaviour
         if (hitObject.tag == "Player")
         {
             playerScript.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        if (hitObject.tag == "Finish")
+        {
+            Destroy(gameObject);
         }
     }
 }
